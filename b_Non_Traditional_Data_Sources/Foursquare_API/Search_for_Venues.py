@@ -23,7 +23,7 @@ import pandas as pd
 import requests
 
 # open csv file with containing the limits fo a grid cell array
-df_grid = pd.read_csv('./grid/grid_bogota.csv')
+df_grid = pd.read_csv('./grid/grid_bcn.csv')
 # Get only the
 df_grid = df_grid[['left', 'top']]
 
@@ -51,8 +51,8 @@ for i in df_grid.index:
 
     # parameters taken from the API developers page 'search for venues' (same as above)
     params = dict(
-        client_id='insert_client_id_here',
-        client_secret='insert_client_secret_here',
+        client_id='3AWC2B2OPSBXOMIHEPAJTA5GPEVLEMQPR3PGGWROLI0BEPEP',
+        client_secret='RFBHD4QNUQA2QAD41FFRMGDDJG21CY0D2WYROCT2VPLLWPCT',
         v='20180323',
         ll=lat_lon,  # each time it is replaced with new coordinates
         intent='browse',
@@ -109,6 +109,6 @@ df_venues_search = df_venues.drop_duplicates(subset=['Venues_id'], keep='last')
 df_venues_search.reset_index(drop=True, inplace=True)
 
 # export data frame df_venues in csv
-df_venues_search.to_csv('./venues_output.csv')
+df_venues_search.to_csv('./bcn_output.csv')
 
 print('Successfully exported %i items from Foursquare' % len(df_venues_search))
