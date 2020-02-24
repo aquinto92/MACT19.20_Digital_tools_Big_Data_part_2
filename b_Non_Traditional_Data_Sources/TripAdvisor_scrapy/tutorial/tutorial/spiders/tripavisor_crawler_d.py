@@ -1,6 +1,5 @@
 import scrapy
 
-
 class QuotesSpider(scrapy.Spider):
     name = "tripadvisor_d"
     start_urls = [
