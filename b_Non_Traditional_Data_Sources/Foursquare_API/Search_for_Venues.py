@@ -23,7 +23,11 @@ import pandas as pd
 import requests
 
 # open csv file with containing the limits fo a grid cell array
+<<<<<<< HEAD
 df_grid = pd.read_csv('./grid/grid_bcn.csv')
+=======
+df_grid = pd.read_csv('./grid/grid.csv')
+>>>>>>> 64e92099e9ffff4b40980bc3b184583b15f8dff7
 # Get only the
 df_grid = df_grid[['left', 'top']]
 
@@ -51,8 +55,13 @@ for i in df_grid.index:
 
     # parameters taken from the API developers page 'search for venues' (same as above)
     params = dict(
+<<<<<<< HEAD
         client_id='3AWC2B2OPSBXOMIHEPAJTA5GPEVLEMQPR3PGGWROLI0BEPEP',
         client_secret='RFBHD4QNUQA2QAD41FFRMGDDJG21CY0D2WYROCT2VPLLWPCT',
+=======
+        client_id='BSPERAIDNGF15MW2FOSPQVAPM0K00QDMCMAMIT2H4M1M0TYO',
+        client_secret='0V0TQGF3HJDDNZAKNIJNGPVUPHLLQHPRQ5TPSTJDISV2LIUJ',
+>>>>>>> 64e92099e9ffff4b40980bc3b184583b15f8dff7
         v='20180323',
         ll=lat_lon,  # each time it is replaced with new coordinates
         intent='browse',
