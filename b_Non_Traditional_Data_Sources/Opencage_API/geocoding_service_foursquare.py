@@ -29,7 +29,7 @@ city = 'Barcelona, Catalonia'
 
 
 # input_addresses. This JSON file is the output coming from the Scrapy spider
-with open('./addresses/restaurants_bcn_short.json') as json_file:
+with open('./addresses/restaurants_bcn.json') as json_file:
     data = json.load(json_file)
 
 addresses = pd.DataFrame.from_dict(data=data)
