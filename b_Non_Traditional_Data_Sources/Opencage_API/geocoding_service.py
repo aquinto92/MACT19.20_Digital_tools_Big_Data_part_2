@@ -25,12 +25,12 @@ import requests
 url = 'https://api.opencagedata.com/geocode/v1/json'
 
 # This is an example to geocode IAAC's address
-address_1 = 'Carrer de pujades, 102'
+address_1 = 'BD1 4DR'
 
 # This object contains the parameters needed for
 params = dict(
     q=address_1,
-    key='replace_with_your_key'
+    key='b0872719f54948ddbeafd09f2e36b7eb'
 )
 resp = requests.get(url=url, params=params)
 # Print the raw response

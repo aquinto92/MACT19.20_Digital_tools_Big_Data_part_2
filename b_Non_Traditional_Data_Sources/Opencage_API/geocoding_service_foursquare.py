@@ -24,7 +24,7 @@ import requests
 
 # url taken by the Foursquare API developers page -> Places API -> Venues -> Search for venues
 url = 'https://api.opencagedata.com/geocode/v1/json'
-key = 'replace_with_your_key'
+key = 'b0872719f54948ddbeafd09f2e36b7eb'
 city = 'Barcelona, Catalonia'
 
 
