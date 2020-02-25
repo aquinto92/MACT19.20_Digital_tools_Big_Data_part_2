@@ -56,5 +56,7 @@ class QuotesSpider(scrapy.Spider):
                 "//span[@class='restaurants-detail-overview-cards-RatingsOverviewCard__overallRating--nohTl']/text()").get(),
             'number_reviews': response.xpath(
                 "//div[@class='restaurants-detail-overview-cards-RatingsOverviewCard__primaryRatingRow--VhEsu']/a[@href='#REVIEWS']/text()").get(),
-            'street': response.xpath("//span[@class='street-address']/text()").get()
+            'street': response.xpath("//span[@class='street-address']/text()").get(),
+            'latitude': response.xpath(
+                '//div[@class="restaurants-detail-overview-cards-LocationOverviewCard__mapImage--22-Al/@data-lat').extract_first(),
         }
